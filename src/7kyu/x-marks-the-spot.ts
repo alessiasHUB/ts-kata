@@ -1,7 +1,9 @@
 /**
- * codewars link: https://www.codewars.com/kata/5777fe3f355edbf0a5000d11
+ * title: x marks the spot
+ * date: 27/10/2022
+ * link: https://www.codewars.com/kata/5777fe3f355edbf0a5000d11
  * =======================================================================
- * Task:
+ * task:
  * Given a two dimensional array, return the co-ordinates of x.
  * If x is not inside the array, or if x appears multiple times, return [].
  * The co-ordinates should be zero indexed in row-major order.
