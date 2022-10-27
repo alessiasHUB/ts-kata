@@ -1,7 +1,7 @@
 /**
- * title: You're a square!
+ * title: you're a square!
  * date: 27/10/2022
- * link: [link](https://www.codewars.com/kata/54c27a33fb7da0db0100040e/train/javascript)
+ * link: https://www.codewars.com/kata/54c27a33fb7da0db0100040e/train/javascript
  * ============================================================
  * task:
  * Given an integral number, determine if it's a square number:
