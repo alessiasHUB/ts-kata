@@ -6,14 +6,12 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 ## K A T A S
 <details>
 <summary>5 kyu</summary>
-<br>
 
 ### [folder](src/5kyu/) 
 None completed yet
 </details>  
 <details>
 <summary>6 kyu</summary>
-<br>
 
 ### [6 kyu katas](src/6kyu/)  
 [break camelCase](src/6kyu/break-camelCase.ts)  
@@ -21,7 +19,6 @@ None completed yet
 </details>  
 <details>
 <summary>7 kyu</summary>
-<br>
 
 ### [folder](src/7kyu/)  
 [x marks the spot](src/7kyu/x-marks-the-spot.ts)  
