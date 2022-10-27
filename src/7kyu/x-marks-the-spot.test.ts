@@ -14,40 +14,40 @@ test("Returns coordinates with only one x", () => {
 });
 
 test("Returns empty array when no X's present", () => {
-    expect(
-      xMarksTheSpot([
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-      ])
-    ).toStrictEqual([]);
-  });
+  expect(
+    xMarksTheSpot([
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+    ])
+  ).toStrictEqual([]);
+});
 
-  test("Returns empty array when multiple X's present", () => {
-    expect(
-      xMarksTheSpot([
-        ["x", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "x"],
-      ])
-    ).toStrictEqual([]);
-  });
+test("Returns empty array when multiple X's present", () => {
+  expect(
+    xMarksTheSpot([
+      ["x", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "x"],
+    ])
+  ).toStrictEqual([]);
+});
 
-  test("Returns empty array when multiple X's on same line present", () => {
-    expect(
-      xMarksTheSpot([
-        ["x", "x", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-        ["o", "o", "o", "o", "o", "o", "o", "o"],
-      ])
-    ).toStrictEqual([]);
-  });
+test("Returns empty array when multiple X's on same line present", () => {
+  expect(
+    xMarksTheSpot([
+      ["x", "x", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+      ["o", "o", "o", "o", "o", "o", "o", "o"],
+    ])
+  ).toStrictEqual([]);
+});

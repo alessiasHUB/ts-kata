@@ -5,12 +5,12 @@
  * Given a two dimensional array, return the co-ordinates of x.
  * If x is not inside the array, or if x appears multiple times, return [].
  * The co-ordinates should be zero indexed in row-major order.
- * You should assume you will always get an array as input. 
+ * You should assume you will always get an array as input.
  * The array will only contain 'x's and 'o's.
  * ========================================================================
  * @params input - [][]
  * @returns number[]
- * 
+ *
  * PROGRAMME xMarksTheSpot(input):
  * Set COORDINATES to equal []
  * FOR EACH array in input:
@@ -22,18 +22,17 @@
  * RETURN COORDINATES
  */
 
- function xMarksTheSpot(input: string[][]): number[]{
-    const coordinates = [];
-    for (let i = 0; i < input.length; i++) {
-      for (let j = 0; j < input[i].length; j++) {
-        if (input[i][j] === "x") {
-          coordinates.push(i);
-          coordinates.push(j);
-        }
+function xMarksTheSpot(input: string[][]): number[] {
+  const coordinates = [];
+  for (let i = 0; i < input.length; i++) {
+    for (let j = 0; j < input[i].length; j++) {
+      if (input[i][j] === "x") {
+        coordinates.push(i);
+        coordinates.push(j);
       }
     }
-    return coordinates.length === 2 ? coordinates : [];
   }
-  
-  export default xMarksTheSpot;
-  
+  return coordinates.length === 2 ? coordinates : [];
+}
+
+export default xMarksTheSpot;
