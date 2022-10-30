@@ -51,7 +51,6 @@ function simple_assembler(program: string[]): object {
         console.log("empty")
       }
     }
-    console.log(count)
   }
 	return myOb
 }
