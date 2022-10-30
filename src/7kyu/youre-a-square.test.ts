@@ -1,21 +1,22 @@
 import isSquare from "./youre-a-square";
 
-test("true positive number", () => {
+// delete the ".skip"
+test.skip("true positive number", () => {
   expect(isSquare(4)).toStrictEqual(true);
 });
 
-test("negative number", () => {
+test.skip("negative number", () => {
   expect(isSquare(-1)).toStrictEqual(false);
 });
 
-test("zero to be true", () => {
+test.skip("zero to be true", () => {
   expect(isSquare(0)).toStrictEqual(true);
 });
 
-test("positive uneven", () => {
+test.skip("positive uneven", () => {
   expect(isSquare(3)).toStrictEqual(false);
 });
 
-test("large true", () => {
+test.skip("large true", () => {
   expect(isSquare(25)).toStrictEqual(true);
 });

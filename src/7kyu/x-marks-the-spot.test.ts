@@ -1,6 +1,7 @@
 import xMarksTheSpot from "./x-marks-the-spot";
 
-test("Returns coordinates with only one x", () => {
+// delete the ".skip"
+test.skip("Returns coordinates with only one x", () => {
   expect(
     xMarksTheSpot([
       ["o", "o", "o", "o", "o", "o", "o", "o"],
@@ -13,7 +14,7 @@ test("Returns coordinates with only one x", () => {
   ).toStrictEqual([4, 6]);
 });
 
-test("Returns empty array when no X's present", () => {
+test.skip("Returns empty array when no X's present", () => {
   expect(
     xMarksTheSpot([
       ["o", "o", "o", "o", "o", "o", "o", "o"],
@@ -26,7 +27,7 @@ test("Returns empty array when no X's present", () => {
   ).toStrictEqual([]);
 });
 
-test("Returns empty array when multiple X's present", () => {
+test.skip("Returns empty array when multiple X's present", () => {
   expect(
     xMarksTheSpot([
       ["x", "o", "o", "o", "o", "o", "o", "o"],
@@ -39,7 +40,7 @@ test("Returns empty array when multiple X's present", () => {
   ).toStrictEqual([]);
 });
 
-test("Returns empty array when multiple X's on same line present", () => {
+test.skip("Returns empty array when multiple X's on same line present", () => {
   expect(
     xMarksTheSpot([
       ["x", "x", "o", "o", "o", "o", "o", "o"],
