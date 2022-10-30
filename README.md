@@ -8,8 +8,9 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 <summary>5 kyu</summary>
 
 #### [folder](src/5kyu/) 
-None completed yet
+[simple assembler interpreter](src/5kyu/simple-assembler-interpreter.ts)  
 </details>  
+
 <details>
 <summary>6 kyu</summary>
 
@@ -17,6 +18,7 @@ None completed yet
 [break camelCase](src/6kyu/break-camelCase.ts)  
 [split list odd even](src/6kyu/split-list-odd-even.ts)  
 </details>  
+
 <details>
 <summary>7 kyu</summary>
 
