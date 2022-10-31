@@ -25,6 +25,7 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 #### [folder](src/7kyu/)  
 [x marks the spot](src/7kyu/x-marks-the-spot.ts)  
 [you're a square](src/7kyu/youre-a-square.ts)  
+[count divisions](src/7kyu/count-divisions.ts)
 </details>  
 
  
