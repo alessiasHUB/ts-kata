@@ -28,4 +28,9 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 [count divisions](src/7kyu/count-divisions.ts)
 </details>  
 
- 
+<details>
+<summary>8 kyu</summary>
+
+#### [folder](src/8kyu/)  
+[negative array](src/8kyu/negative-array.ts)  
+</details>  
