@@ -9,6 +9,7 @@
  * @param a - an array of numbers
  * @returns array one with only negative numbers
  */
+
 function negArray(a: number[]): number[] {
   const aNeg = [];
   for (let num of a){
