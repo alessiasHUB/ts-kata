@@ -1,5 +1,5 @@
 /**
- * title: return an array of negative numbers 
+ * title: return an array of negative numbers
  * date: 31/10/2022
  * link: -
  * ============================================================
@@ -12,9 +12,9 @@
 
 function negArray(a: number[]): number[] {
   const aNeg = [];
-  for (let num of a){
-    if (num < 0){
-      aNeg.push(num)
+  for (let num of a) {
+    if (num < 0) {
+      aNeg.push(num);
     }
   }
   return aNeg;

@@ -10,8 +10,8 @@
  * @returns a boolean
  */
 
-var isSquare = function(n: number): boolean{
-  return n >= 0 && Math.sqrt(n) % 1 === 0 ? true : false
-}
+var isSquare = function (n: number): boolean {
+  return n >= 0 && Math.sqrt(n) % 1 === 0 ? true : false;
+};
 
 export default isSquare;

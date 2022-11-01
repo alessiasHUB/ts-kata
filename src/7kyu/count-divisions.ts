@@ -4,7 +4,7 @@
  * link: -
  * ============================================================
  * task:
- * Write a function which takes a number, n, and repeatedly divides it by 2 until the result is 1 or smaller.  
+ * Write a function which takes a number, n, and repeatedly divides it by 2 until the result is 1 or smaller.
  * It should return the count of the number of divisions that were made.
  * You can assume n will always be greater than 0.
  * The function should be called `roughLog2`.
@@ -22,10 +22,10 @@
  * @returns a number
  */
 function roughLog2(n: number): number {
-  let count : number = 0;
-  while (n % 2 === 0){
-    n = n/2
-    count ++
+  let count: number = 0;
+  while (n % 2 === 0) {
+    n = n / 2;
+    count++;
   }
   return count;
 }

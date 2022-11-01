@@ -33,5 +33,6 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 <summary>8 kyu</summary>
 
 #### [folder](src/8kyu/)  
-[negative array](src/8kyu/negative-array.ts)  
+[negative array](src/8kyu/negative-array.ts) 
+[print object keys](src/8kyu/print-object-keys.ts)  
 </details>  

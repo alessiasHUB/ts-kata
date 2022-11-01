@@ -4,28 +4,27 @@
  * link: -
  * ============================================================
  * task:
- * Write a function, printAllKeyValuePairs(obj) which takes an 
- * object with unknown content and prints to console, one per 
+ * Write a function, printAllKeyValuePairs(obj) which takes an
+ * object with unknown content and prints to console, one per
  * line, each key and value in the object.
  * ============================================================
  * Adds together two numbers
  * @param obj - input object
  */
-function printAllKeyValuePairs(obj: any):void {
-  for (let pairs in obj){
-    console.log(pairs, obj[pairs])
+function printAllKeyValuePairs(obj: any): void {
+  for (let pairs in obj) {
+    console.log(pairs, obj[pairs]);
   }
-  
 }
 
-const characters :any = {
+const characters: any = {
   Bruce: "Hulk",
   Peter: "Spiderman",
-  Ororo: "Storm"
+  Ororo: "Storm",
 };
 
-console.log(characters["Bruce"])
-printAllKeyValuePairs(characters)
+console.log(characters["Bruce"]);
+printAllKeyValuePairs(characters);
 
 /* 
 Bruce Hulk

@@ -1,10 +1,10 @@
 /**
- * title: 
+ * title:
  * date: //2022
- * link: 
+ * link:
  * ============================================================
  * task:
- * 
+ *
  * ============================================================
  * Adds together two numbers
  * @param a - the first number to add
