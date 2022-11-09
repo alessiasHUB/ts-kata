@@ -9,6 +9,7 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 
 #### [folder](src/5kyu/) 
 [simple assembler interpreter](src/5kyu/simple-assembler-interpreter.ts)  
+[partition](src/5kyu/partition.ts)
 </details>  
 
 <details>
