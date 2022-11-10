@@ -38,3 +38,9 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 [negative array](src/8kyu/negative-array.ts) 
 [print object keys](src/8kyu/print-object-keys.ts)  
 </details>  
+
+<details>
+<summary>Collaborative katas</summary>
+
+[filter](https://github.com/syndercres/map-kata/blob/main/src/filter.ts)
+</details>  
