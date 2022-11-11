@@ -8,6 +8,7 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 <summary>5 kyu</summary>
 
 #### [folder](src/5kyu/) 
+[beeramid](src/5kyu/beeramid.ts)
 [simple assembler interpreter](src/5kyu/simple-assembler-interpreter.ts)  
 [partition](src/5kyu/partition.ts)
 </details>  
