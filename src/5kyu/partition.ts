@@ -17,12 +17,12 @@ export function callbackFn(element: number): boolean {
 }
 
 export function partition(arr: number[], callbackFn: Function): number[][] {
-  const result : number[][] = [[],[]];
-  for (let i=0; i<arr.length; i++) {
+  const result: number[][] = [[], []];
+  for (let i = 0; i < arr.length; i++) {
     if (callbackFn(arr[i])) {
-      result[0].push(arr[i])
+      result[0].push(arr[i]);
     } else {
-      result[1].push(arr[i])
+      result[1].push(arr[i]);
     }
   }
   return result;
