@@ -4,8 +4,8 @@
  * link: https://www.codewars.com/kata/51e04f6b544cf3f6550000c1/train/javascript
  * ============================================================
  * task:
- * A beer can pyramid will square the number of cans in each 
- * level - 1 can in the top level, 4 in the second, 9 in the 
+ * A beer can pyramid will square the number of cans in each
+ * level - 1 can in the top level, 4 in the second, 9 in the
  * next, 16, 25...
  * ============================================================
  * Adds together two numbers
