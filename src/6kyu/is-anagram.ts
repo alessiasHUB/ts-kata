@@ -12,8 +12,8 @@
  * only characters a-z.
  * ============================================================
  * Adds together two numbers
- * @param a - the first word
- * @param b - the second word
+ * @param firstString - the first word
+ * @param secondString - the second word
  * @returns a boolean
  * ============================================================
  * PROGRAM:
@@ -31,8 +31,22 @@
  * RETURN false
  */
 
-function isAnagram(a: string, b: string): boolean {
-  
+ function isAnagram(firstString: string, secondString:string): boolean {
+  if (firstString.length === secondString.length) {
+    let i = 0;
+    const firstArr = firstString.split("");
+    const secondArr = secondString.split("");
+    while (secondArr.includes(firstArr[i])) {
+      let letter = firstArr[i];
+      secondArr.splice(secondArr.indexOf(letter), 1);
+      console.log(secondArr);
+      i++;
+      if (i === firstArr.length) {
+        console.log("here");
+        return true;
+      }
+    }
+  }
   return false;
 }
 

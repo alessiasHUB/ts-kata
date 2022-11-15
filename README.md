@@ -17,6 +17,7 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 <summary>6 kyu</summary>
 
 #### [folder](src/6kyu/)  
+[is anagram](src/6kyu/is-anagram.ts)
 [break camelCase](src/6kyu/break-camelCase.ts)  
 [split list odd even](src/6kyu/split-list-odd-even.ts)  
 [reverse object keys](src/6kyu/reverse-object-keys.ts)
