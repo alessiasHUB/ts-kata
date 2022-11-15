@@ -1,13 +1,16 @@
 # T Y P E S C R I P T .  K A T A S
-These are my katas found on codewars  
-Solved using typescript  
-Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" target="_blank">here</a>  
+>These are my katas found on codewars and,  
+or part of Academys curriculum.  
+All are solved using typescript  
+
+
+Link to my Codewars: [<img src="https://docs.codewars.com/logo.svg" height=15>](https://www.codewars.com/users/alessiasHUB/)
 
 ## K A T A S
 <details>
 <summary>5 kyu</summary>
 
-#### [folder](src/5kyu/) 
+##### [5 kyu folder](src/5kyu/) 
 [beeramid](src/5kyu/beeramid.ts)
 [simple assembler interpreter](src/5kyu/simple-assembler-interpreter.ts)  
 [partition](src/5kyu/partition.ts)
@@ -16,7 +19,7 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 <details>
 <summary>6 kyu</summary>
 
-#### [folder](src/6kyu/)  
+##### [6 kyu folder](src/6kyu/)  
 [is anagram](src/6kyu/is-anagram.ts)
 [break camelCase](src/6kyu/break-camelCase.ts)  
 [split list odd even](src/6kyu/split-list-odd-even.ts)  
@@ -26,7 +29,7 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 <details>
 <summary>7 kyu</summary>
 
-#### [folder](src/7kyu/)  
+##### [7kyu folder](src/7kyu/)  
 [x marks the spot](src/7kyu/x-marks-the-spot.ts)  
 [you're a square](src/7kyu/youre-a-square.ts)  
 [count divisions](src/7kyu/count-divisions.ts)
@@ -36,7 +39,7 @@ Link to my Codewars: <a href="https://www.codewars.com/users/alessiasHUB/" targe
 <details>
 <summary>8 kyu</summary>
 
-#### [folder](src/8kyu/)  
+##### [8 kyu folder](src/8kyu/)  
 [negative array](src/8kyu/negative-array.ts) 
 [print object keys](src/8kyu/print-object-keys.ts)  
 </details>  
