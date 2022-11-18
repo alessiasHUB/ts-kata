@@ -20,6 +20,7 @@ Link to my Codewars: [<img src="https://docs.codewars.com/logo.svg" height=15>](
 <summary>6 kyu</summary>
 
 ##### [6 kyu folder](src/6kyu/)  
+[get most common letters](src/6kyu/get-most-common-letters.ts)
 [is anagram](src/6kyu/is-anagram.ts)
 [break camelCase](src/6kyu/break-camelCase.ts)  
 [split list odd even](src/6kyu/split-list-odd-even.ts)  

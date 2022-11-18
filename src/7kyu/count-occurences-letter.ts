@@ -8,7 +8,6 @@
  * returns an object detailing the number of occurrences in the 
  * string of each letter in the string.
  * ============================================================
- * Adds together two numbers
  * @param a - the string to evaluate
  * @returns an object with each letter: number
  */
