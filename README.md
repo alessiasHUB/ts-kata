@@ -30,6 +30,7 @@ Link to my Codewars: [<img src="https://docs.codewars.com/logo.svg" height=15>](
 <summary>7 kyu</summary>
 
 ##### [7kyu folder](src/7kyu/)  
+[count occurences letter](src/7kyu/count-occurences-letter.ts)
 [x marks the spot](src/7kyu/x-marks-the-spot.ts)  
 [you're a square](src/7kyu/youre-a-square.ts)  
 [count divisions](src/7kyu/count-divisions.ts)
