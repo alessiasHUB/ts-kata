@@ -22,7 +22,7 @@
  *  5            25             5^2 = 25
  *  ...
  * ----------------------------------------
- * 
+ *
  */
 
 export var beeramid = function (bonus: number, price: number): number {
