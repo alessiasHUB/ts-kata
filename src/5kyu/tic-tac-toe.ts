@@ -36,72 +36,71 @@ type BoardState = [
 ];
 
 function calcWinState(boardState: BoardState): WinStatus {
-  let result: string[] = [];
+  // let result: string[] = [];
 
   // winning states
   if (
     boardState[0][0] == boardState[0][1] &&
     boardState[0][0] == boardState[0][2]
   ) {
-    result.push(boardState[0][0]);
-  }
-  if (
+    if (boardState[0][0] == "x") {
+      return { status: "x won" };
+    } else {
+      return { status: "o won" };
+    }
+  } else if (
     boardState[0][0] == boardState[0 + 1][1] &&
     boardState[0 + 1][0] == boardState[0 + 2][2]
   ) {
-    result.push(boardState[0][0]);
-  }
-  if (
+    if (boardState[0][0] == "x") {
+      return { status: "x won" };
+    } else {
+      return { status: "o won" };
+    }
+  } else if (
     boardState[0 + 2][2] == boardState[0 + 1][1] &&
     boardState[0 + 2][2] == boardState[0][0]
   ) {
-    result.push(boardState[0 + 2][2]);
-  }
-  if (
+    if (boardState[0][0] == "x") {
+      return { status: "x won" };
+    } else {
+      return { status: "o won" };
+    }
+  } else if (
     boardState[0][0] == boardState[0 + 1][0] &&
     boardState[0][0] == boardState[0 + 2][0]
   ) {
-    result.push(boardState[0][0]);
-  }
-  if (
+    if (boardState[0][0] == "x") {
+      return { status: "x won" };
+    } else {
+      return { status: "o won" };
+    }
+  } else if (
     boardState[0][1] == boardState[0 + 1][1] &&
     boardState[0][1] == boardState[0 + 2][1]
   ) {
-    result.push(boardState[0][1]);
-  }
-  if (
+    if (boardState[0][0] == "x") {
+      return { status: "x won" };
+    } else {
+      return { status: "o won" };
+    }
+  } else if (
     boardState[0][2] == boardState[0 + 1][2] &&
     boardState[0][2] == boardState[0 + 2][2]
   ) {
-    result.push(boardState[0][2]);
+    if (boardState[0][0] == "x") {
+      return { status: "x won" };
+    } else {
+      return { status: "o won" };
+    }
   }
 
   // if game is not finished
-  if (result.length == 0) {
-    for (let i = 0; i < 3; i++) {
-      if (boardState[i].includes(" ")) {
-        return { status: "the game has not been finished yet" };
-      }
-    }
-  }
-
-  // draw scenario
-  if (result.length == 0 || (result.length == 2 && result[0] != result[1])) {
-    return { status: "there was a draw" };
-  }
-
-  // win scenarios
-  if (result.length == 1) {
-    if (result[0] == "x") {
-      return { status: "x won" };
-    } else {
-      return { status: "o won" };
-    }
-  } else if (result.length > 1 && result[0] == result[1]) {
-    if (result[0] == "x") {
-      return { status: "x won" };
-    } else {
-      return { status: "o won" };
+  for (let i = 0; i < 3; i++) {
+    if (boardState[i].includes(" ")) {
+      return { status: "the game has not been finished yet" };
+    } /*draw scenario*/ else {
+      return { status: "there was a draw" };
     }
   }
   return { status: "the game has not been finished yet" };
