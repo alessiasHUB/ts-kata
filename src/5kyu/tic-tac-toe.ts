@@ -36,8 +36,6 @@ type BoardState = [
 ];
 
 function calcWinState(boardState: BoardState): WinStatus {
-  // let result: string[] = [];
-
   // winning states
   if (
     boardState[0][0] == boardState[0][1] &&
