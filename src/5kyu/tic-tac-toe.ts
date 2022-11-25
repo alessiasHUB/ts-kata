@@ -16,92 +16,83 @@
  * Assume, for simplicity, that type Player = "x" | "o"
  * ============================================================
  * Detect wins in TicTacToe
- * @param BoardState
- * @returns WinStatus
+ * @param board of type BoardState
+ * @returns WinState
  */
 
 // defining types
-interface WinStatus {
-  status:
-    | "there was a draw"
-    | "the game has not been finished yet"
-    | "x won"
-    | "o won";
-}
-type Player = "x" | "o" | " ";
+type Player = "X" | "O";
+type PosState = Player | "";
 type BoardState = [
-  [Player, Player, Player],
-  [Player, Player, Player],
-  [Player, Player, Player]
+  PosState,
+  PosState,
+  PosState,
+  PosState,
+  PosState,
+  PosState,
+  PosState,
+  PosState,
+  PosState
 ];
+type PosIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
+type Line = [PosIndex, PosIndex, PosIndex];
+type WinState =
+  | { state: "draw" }
+  | { state: "not finished" }
+  | { state: "won"; winner: Player };
 
-function calcWinState(boardState: BoardState): WinStatus {
-  // winning states
-  if (
-    boardState[0][0] == boardState[0][1] &&
-    boardState[0][0] == boardState[0][2]
-  ) {
-    if (boardState[0][0] == "x") {
-      return { status: "x won" };
-    } else {
-      return { status: "o won" };
-    }
-  } else if (
-    boardState[0][0] == boardState[0 + 1][1] &&
-    boardState[0 + 1][0] == boardState[0 + 2][2]
-  ) {
-    if (boardState[0][0] == "x") {
-      return { status: "x won" };
-    } else {
-      return { status: "o won" };
-    }
-  } else if (
-    boardState[0 + 2][2] == boardState[0 + 1][1] &&
-    boardState[0 + 2][2] == boardState[0][0]
-  ) {
-    if (boardState[0][0] == "x") {
-      return { status: "x won" };
-    } else {
-      return { status: "o won" };
-    }
-  } else if (
-    boardState[0][0] == boardState[0 + 1][0] &&
-    boardState[0][0] == boardState[0 + 2][0]
-  ) {
-    if (boardState[0][0] == "x") {
-      return { status: "x won" };
-    } else {
-      return { status: "o won" };
-    }
-  } else if (
-    boardState[0][1] == boardState[0 + 1][1] &&
-    boardState[0][1] == boardState[0 + 2][1]
-  ) {
-    if (boardState[0][0] == "x") {
-      return { status: "x won" };
-    } else {
-      return { status: "o won" };
-    }
-  } else if (
-    boardState[0][2] == boardState[0 + 1][2] &&
-    boardState[0][2] == boardState[0 + 2][2]
-  ) {
-    if (boardState[0][0] == "x") {
-      return { status: "x won" };
-    } else {
-      return { status: "o won" };
+// returns true if all three are the same PosState("X" | "O" | "")
+// used in function: winningLine
+function allSame(a: PosState, b: PosState, c: PosState): boolean {
+  return a === b && b === c;
+}
+
+// returns who the winner is: "X" | "O" | ""
+function winningLine(board: BoardState, allSame: Function): PosState | boolean {
+  const lines: Line[] = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  for (let i = 0; i < lines.length; i++) {
+    if (
+      allSame(board[lines[i][0]], board[lines[i][1]], board[lines[i][2]]) &&
+      board[lines[i][0]] !== ""
+    ) {
+      return board[lines[i][0]];
     }
   }
+  return false;
+}
 
-  // if game is not finished
-  for (let i = 0; i < 3; i++) {
-    if (boardState[i].includes(" ")) {
-      return { status: "the game has not been finished yet" };
-    } /*draw scenario*/ else {
-      return { status: "there was a draw" };
-    }
+// returns who the winner is
+function getWinner(board: BoardState, winningLine: Function): Player {
+  if (winningLine(board, allSame) === "X") {
+    return "X";
+  } else {
+    return "O";
   }
-  return { status: "the game has not been finished yet" };
+  return "X";
+}
+
+// returns 'true' if the board has no "" (use after checking for winners)
+function fullBoard(board: BoardState): boolean {
+  return !board.some((el) => el === "");
+}
+
+export function calcWinState(board: BoardState): WinState {
+  if (winningLine(board, allSame)) {
+    return { state: "won", winner: getWinner(board, winningLine) };
+  } else if (fullBoard(board)) {
+    return { state: "draw" };
+  } else {
+    return { state: "not finished" };
+  }
 }
 
 export default calcWinState;

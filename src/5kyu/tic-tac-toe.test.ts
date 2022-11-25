@@ -2,39 +2,15 @@ import calcWinState from "./tic-tac-toe";
 
 // delete the ".skip"
 test.skip("testing", () => {
-  expect(
-    calcWinState([
-      ["x", "o", "x"],
-      ["x", "o", "o"],
-      ["x", "x", "o"],
-    ])
-  ).toEqual({ status: "x won" });
-  expect(
-    calcWinState([
-      ["x", "o", "x"],
-      ["x", "x", "o"],
-      ["o", "o", "x"],
-    ])
-  ).toEqual({ status: "x won" });
-  expect(
-    calcWinState([
-      ["x", "o", "x"],
-      ["o", "o", "x"],
-      ["x", "o", "o"],
-    ])
-  ).toEqual({ status: "o won" });
-  expect(
-    calcWinState([
-      ["x", "o", "x"],
-      ["x", "o", "o"],
-      ["o", "x", "o"],
-    ])
-  ).toEqual({ status: "there was a draw" });
-  expect(
-    calcWinState([
-      ["x", "o", "x"],
-      ["x", "o", "o"],
-      [" ", " ", "o"],
-    ])
-  ).toEqual({ status: "the game has not been finished yet" });
+  expect(calcWinState(["X", "O", "X", "X", "O", "O", "X", "X", "O"])).toEqual({
+    state: "won",
+    winner: "X",
+  });
+  expect(calcWinState(["X", "O", "X", "X", "", "O", "", "X", "O"])).toEqual({
+    state: "not finished",
+  });
+  expect(calcWinState(["O", "X", "", "O", "X", "O", "O", "", "X"])).toEqual({
+    state: "won",
+    winner: "O",
+  });
 });
