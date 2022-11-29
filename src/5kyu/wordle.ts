@@ -1,10 +1,16 @@
 /**
  * title: Wordle
  * date: 29/11/2022
- * link: -
+ * link: https://www.notion.so/weareacademy/Marking-Wordle-Guesses-TypeScript-3e378f71438142dea8f079763a9f4a25
  * ============================================================
  * task:
- *
+ * Write a function, `markWordleGuess(guess: string, 
+ * hiddenTarget: string):MarkedGuess` which calculates the 
+ * correctness hints for each letter of a given single guess in 
+ * Wordle based on the given hidden target.
+ * Assume that the strings guess and hiddenTarget are always 
+ * formed of exactly 5 upper-case alphabet characters 
+ * (often with repeats).
  * ============================================================
  * checks if a guess matches the correct answer
  * @param guess - the guess
