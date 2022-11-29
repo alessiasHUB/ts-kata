@@ -1,98 +1,87 @@
 /**
- * title: TicTacToe
- * date: 21/11/2022
- * link: -
+ * title: Tic-Tac-Toe Checker
+ * date: 29/11/2022
+ * link: https://www.codewars.com/kata/525caa5c1bf619d28c000335/train/javascript
  * ============================================================
  * task:
- * # Detect wins in TicTacToe
- * Write a function calcWinState to take a representation of
- * a tictactoe (noughts and crosses) board ( `BoardState`) and
- * return the status (WinStatus): either
- * - there was a draw;
- * - or the game has not been finished yet;
- * - or a player won (indicate the winning player)
- * Assume all input board states are legal (e.g. no board has
- * winning rows by BOTH players).
- * Assume, for simplicity, that type Player = "x" | "o"
+ * If we were to set up a Tic-Tac-Toe game, we would want to
+ * know whether the board's current state is solved, wouldn't
+ * we? Our goal is to create a function that will check that
+ * for us!
+ * Assume that the board comes in the form of a 3x3 array,
+ * where the value is 0 if a spot is empty, 1 if it is an "X",
+ * or 2 if it is an "O", like so:
+ * [[0, 0, 1],
+ *  [0, 1, 2],
+ *  [2, 1, 0]]
+ * We want our function to return:
+ * -1 if the board is not yet finished AND no one has won yet
+ *   (there are empty spots),
+ * 1 if "X" won,
+ * 2 if "O" won,
+ * 0 if it's a cat's game (i.e. a draw).
+ * You may assume that the board passed in is valid in the
+ * context of a game of Tic-Tac-Toe.
  * ============================================================
- * Detect wins in TicTacToe
- * @param board of type BoardState
- * @returns WinState
+ * checks a game of tic tac toe
+ * @param board - the game board
+ * @returs the state of the board
  */
-
-// defining types
-type Player = "X" | "O";
-type PosState = Player | "";
-type BoardState = [
-  PosState,
-  PosState,
-  PosState,
-  PosState,
-  PosState,
-  PosState,
-  PosState,
-  PosState,
-  PosState
-];
-type PosIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8;
-type Line = [PosIndex, PosIndex, PosIndex];
-type WinState =
-  | { state: "draw" }
-  | { state: "not finished" }
-  | { state: "won"; winner: Player };
-
-// returns true if all three are the same PosState("X" | "O" | "")
-// used in function: winningLine
-function allSame(a: PosState, b: PosState, c: PosState): boolean {
-  return a === b && b === c;
-}
-
-// returns who the winner is: "X" | "O" | ""
-function winningLine(board: BoardState, allSame: Function): PosState | boolean {
-  const lines: Line[] = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-  for (let i = 0; i < lines.length; i++) {
-    if (
-      allSame(board[lines[i][0]], board[lines[i][1]], board[lines[i][2]]) &&
-      board[lines[i][0]] !== ""
-    ) {
-      return board[lines[i][0]];
+function isSolved(board: number[][]): number {
+  // rows
+  for (let i = 0; i < board.length; i++) {
+    if (board[i][0] === board[i][1] && board[i][1] === board[i][2]) {
+      if (board[i][0] === 0) {
+        return -1;
+      } else if (board[i][0] === 1) {
+        return 1;
+      } else if (board[i][0] === 2) {
+        return 2;
+      }
     }
   }
-  return false;
-}
-
-// returns who the winner is
-function getWinner(board: BoardState, winningLine: Function): Player {
-  if (winningLine(board, allSame) === "X") {
-    return "X";
-  } else {
-    return "O";
+  // columns
+  const columns = [
+    board.map((x) => x[0]),
+    board.map((x) => x[1]),
+    board.map((x) => x[2]),
+  ];
+  for (let i = 0; i < columns.length; i++) {
+    if (columns[i][0] === columns[i][1] && columns[i][1] === columns[i][2]) {
+      if (columns[i][0] === 0) {
+        return -1;
+      } else if (columns[i][0] === 1) {
+        return 1;
+      } else if (columns[i][0] === 2) {
+        return 2;
+      }
+    }
   }
-  return "X";
-}
-
-// returns 'true' if the board has no "" (use after checking for winners)
-function fullBoard(board: BoardState): boolean {
-  return !board.some((el) => el === "");
-}
-
-export function calcWinState(board: BoardState): WinState {
-  if (winningLine(board, allSame)) {
-    return { state: "won", winner: getWinner(board, winningLine) };
-  } else if (fullBoard(board)) {
-    return { state: "draw" };
-  } else {
-    return { state: "not finished" };
+  // diagonal
+  if (board[0][0] === board[1][1] && board[0][0] === board[2][2]) {
+    if (board[0][0] === 0) {
+      return -1;
+    } else if (board[0][0] === 1) {
+      return 1;
+    } else if (board[0][0] === 2) {
+      return 2;
+    }
+  } else if (board[0][2] === board[1][1] && board[0][2] === board[2][0]) {
+    if (board[0][2] === 0) {
+      return -1;
+    } else if (board[0][2] === 1) {
+      return 1;
+    } else if (board[0][2] === 2) {
+      return 2;
+    }
   }
+  // not finished or draw
+  for (let i = 0; i < board.length; i++) {
+    if (board[i].includes(0)) {
+      return -1;
+    }
+  }
+  return 0;
 }
 
-export default calcWinState;
+export default isSolved;
