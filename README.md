@@ -10,14 +10,15 @@ Link to my Codewars: [<img src="https://docs.codewars.com/logo.svg" height=15>](
 <details>
 <summary>5 kyu</summary>
 
-##### [5 kyu folder](src/5kyu/) 
-[check sudoku board](src/5kyu/check-sudoku-board.ts)
-[PascalCase-to-snake_case](src/5kyu/PascalCase-to-snake_case.ts)
-[hex string to RGB](src/5kyu/hex-string-to-RGB.ts)
-[valid parentheses](src/5kyu/valid-parentheses.ts)
-[tic tac toe](src/5kyu/tic-tac-toe.ts)
-[beeramid](src/5kyu/beeramid.ts)
-[simple assembler interpreter](src/5kyu/simple-assembler-interpreter.ts)  
+##### [5 kyu folder](src/5kyu/)  
+[wordle](src/5kyu/wordle.ts)  
+[check sudoku board](src/5kyu/check-sudoku-board.ts)  
+[PascalCase-to-snake_case](src/5kyu/PascalCase-to-snake_case.ts)  
+[hex string to RGB](src/5kyu/hex-string-to-RGB.ts)  
+[valid parentheses](src/5kyu/valid-parentheses.ts)  
+[tic tac toe](src/5kyu/tic-tac-toe.ts)  
+[beeramid](src/5kyu/beeramid.ts)  
+[simple assembler interpreter](src/5kyu/simple-assembler-interpreter.ts)   
 [partition](src/5kyu/partition.ts)
 </details>  
 
